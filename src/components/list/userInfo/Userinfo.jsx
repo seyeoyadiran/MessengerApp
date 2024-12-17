@@ -1,7 +1,7 @@
 import "./userInfo.css";
 import Image from '../imgs/ava.png';
 import Image2 from '../imgs/more.png';
-import Image3 from '../imgs/FT.png';
+import Image3 from '../imgs/Video.png';
 import Image4 from '../imgs/edit.png';
 
 const UserInfo = () => {
