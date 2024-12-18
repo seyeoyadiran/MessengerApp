@@ -1,4 +1,5 @@
 import "./chat.css"
+import { useEffect, useRef, useState } from "react";
 import EmojiPicker from "emoji-picker-react"
 
 {/* Importing Images */}
@@ -10,17 +11,21 @@ import Emoji from './imgs/emoji.png';
 import Img from './imgs/img.png';
 import Camera from './imgs/Camera.png';
 import Mic from './imgs/mic.png';
-import { useState } from "react";
-
+import Stellar from './imgs/Interstellar.jpg';
 const Chat = () => {
 
     const [open, setOpen ] = useState(false);
     const [text, setText] = useState("");
 
+    const endRef = useRef(null)
+    useEffect(() => {
+        endRef.current?.scrollIntoView({ behavior: "smooth"});
+    }, []);
+
     const handleEmoji = e =>{
         setText((prev)  => prev + e.emoji);
         setOpen(false)
-    }
+    };
 
     return(
         <div className='chat'>
@@ -39,8 +44,8 @@ const Chat = () => {
                 </div>
             </div>
             <div className="center">
-                <div className="message">
-                    <img src={Mic} alt="" />
+                <div className="message ">
+                    <img src={Avatar} alt="" />
                     <div className="texts">
                         <p> 
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi est commodi officiis aperiam assumenda velit ad aliquid dolorum neque mollitia, dicta iusto maiores necessitatibus natus sed. Recusandae velit ipsum tempora.
@@ -48,6 +53,50 @@ const Chat = () => {
                         <span> 1 min ago</span>
                     </div>
                 </div>
+                <div className="message own">
+                    <div className="texts">
+                        <p> 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi est commodi officiis aperiam assumenda velit ad aliquid dolorum neque mollitia, dicta iusto maiores necessitatibus natus sed. Recusandae velit ipsum tempora.
+                        </p>
+                        <span> 1 min ago</span>
+                    </div>
+                </div>
+                <div className="message">
+                    <img src={Avatar} alt="" />
+                    <div className="texts">
+                        <p> 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi est commodi officiis aperiam assumenda velit ad aliquid dolorum neque mollitia, dicta iusto maiores necessitatibus natus sed. Recusandae velit ipsum tempora.
+                        </p>
+                        <span> 1 min ago</span>
+                    </div>
+                </div>
+                <div className="message own">
+                    <div className="texts">
+                        <p> 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi est commodi officiis aperiam assumenda velit ad aliquid dolorum neque mollitia, dicta iusto maiores necessitatibus natus sed. Recusandae velit ipsum tempora.
+                        </p>
+                        <span> 1 min ago</span>
+                    </div>
+                </div>
+                <div className="message ">
+                    <img src={Avatar} alt="" /> 
+                    <div className="texts">
+                        <p> 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi est commodi officiis aperiam assumenda velit ad aliquid dolorum neque mollitia, dicta iusto maiores necessitatibus natus sed. Recusandae velit ipsum tempora.
+                        </p>
+                        <span> 1 min ago</span>
+                    </div>
+                </div>
+                <div className="message own">
+                    <div className="texts">
+                    <img src={Stellar} alt="" />   
+                        <p> 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi est commodi officiis aperiam assumenda velit ad aliquid dolorum neque mollitia, dicta iusto maiores necessitatibus natus sed. Recusandae velit ipsum tempora.
+                        </p>
+                        <span> 1 min ago</span>
+                    </div>
+                </div>
+                <div ref={endRef}></div>
             </div>
             <div className="bottom">
                 <div className="icons"> 

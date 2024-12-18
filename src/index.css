@@ -1,5 +1,6 @@
 body { 
-  background-image: url("./assets/Lake.avif");
+  /*background-image: url("./assets/Lake.avif");*/
+  background-color: white;
   background-size:cover;
   align-items: center;
   justify-content: center;
@@ -8,8 +9,8 @@ body {
 }
 
 .container{
-   width: 90vw;
-   height: 90vh;
+   width: 85vw;
+   height: 93vh;
    background-color: rgba(17, 25, 40, 0.75);
    backdrop-filter: blur(15px) saturate(180%);
    border-radius: 12px;

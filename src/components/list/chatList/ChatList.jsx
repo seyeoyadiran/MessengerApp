@@ -4,6 +4,7 @@ import Plus from '../imgs/plus.png';
 import Minus from '../imgs/Minus.png';
 import Avatar from '../imgs/ava.png';
 import { useState } from "react";
+import AddUser from "./addUser/addUser";
 
 const ChatList = () => {
     
@@ -96,9 +97,8 @@ const ChatList = () => {
                     <p> Hello </p>
                 </div>  
             </div>
+            {addMode && <AddUser/>}
         </div>
-            
-
             
     )
 }
